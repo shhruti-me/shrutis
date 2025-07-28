@@ -76,10 +76,7 @@ const SwissPortfolio = () => {
       {/* Navigation - Swiss Grid */}
       <nav className="fixed top-0 w-full bg-background border-b border-border z-50">
         <div className="max-w-screen-xl mx-auto px-8 py-6">
-          <div className="grid grid-cols-2 items-center">
-            <div>
-              <h1 className="text-2xl swiss-title tracking-wide">SHRUTI</h1>
-            </div>
+          <div className="grid grid-cols-1 items-center">
             <div className="justify-self-end">
               <div className="flex gap-8 text-sm font-medium tracking-wider uppercase">
                 <a href="#about" className="hover:bg-primary hover:text-primary-foreground px-3 py-1 transition-all">About</a>
