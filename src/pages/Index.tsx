@@ -1,7 +1,7 @@
-import Portfolio from "@/components/Portfolio";
+import SwissPortfolio from "@/components/SwissPortfolio";
 
 const Index = () => {
-  return <Portfolio />;
+  return <SwissPortfolio />;
 };
 
 export default Index;
