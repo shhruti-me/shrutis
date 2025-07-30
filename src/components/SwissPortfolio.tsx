@@ -167,7 +167,7 @@ const SwissPortfolio = () => {
       <section className="pt-32 pb-16 px-4 md:px-8 max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <h1 className="text-4xl md:text-8xl swiss-title leading-none tracking-tighter mb-4">
+            <h1 className="text-5xl md:text-8xl font-bold swiss-title leading-none tracking-tighter mb-4">
               SHRUTI
             </h1>
             <div className="swiss-line mb-6"></div>
@@ -187,7 +187,7 @@ const SwissPortfolio = () => {
       <section id="about" className="swiss-section px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
-            <h2 className="text-2xl md:text-3xl swiss-title tracking-wide mb-8">ABOUT</h2>
+            <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">ABOUT</h2>
           </div>
           <div className="md:col-span-9">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -220,7 +220,7 @@ const SwissPortfolio = () => {
       <section id="experience" className="swiss-section px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
-            <h2 className="text-2xl md:text-3xl swiss-title tracking-wide mb-8">EXPERIENCE</h2>
+            <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">EXPERIENCE</h2>
           </div>
           <div className="md:col-span-9 space-y-12">
             {experiences.map((exp, index) => (
@@ -258,7 +258,7 @@ const SwissPortfolio = () => {
       <section id="projects" className="swiss-section px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
-            <h2 className="text-2xl md:text-3xl swiss-title tracking-wide mb-8">PROJECTS</h2>
+            <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">PROJECTS</h2>
             <p className="swiss-body text-muted-foreground leading-relaxed">
               A collection of functional design solutions and development projects
             </p>
@@ -296,7 +296,7 @@ const SwissPortfolio = () => {
       <section id="design-projects" className="swiss-section px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
-            <h2 className="text-2xl md:text-3xl swiss-title tracking-wide mb-8">DESIGN PROJECTS</h2>
+            <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">DESIGN PROJECTS</h2>
             <p className="swiss-body text-muted-foreground leading-relaxed">
               Visual design solutions and interface concepts crafted with precision
             </p>
@@ -334,7 +334,7 @@ const SwissPortfolio = () => {
       <section id="contact" className="swiss-section px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
-            <h2 className="text-2xl md:text-3xl swiss-title tracking-wide mb-8">CONTACT</h2>
+            <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">CONTACT</h2>
           </div>
           <div className="md:col-span-9">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
