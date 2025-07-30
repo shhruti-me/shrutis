@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Figma } from "lucide-react";
 
 interface Experience {
   title: string;
@@ -12,6 +12,13 @@ interface Project {
   title: string;
   description: string;
   githubUrl: string;
+}
+
+interface DesignProject {
+  id: number;
+  title: string;
+  description: string;
+  figmaUrl: string;
 }
 
 const SwissPortfolio = () => {
@@ -69,6 +76,15 @@ const SwissPortfolio = () => {
     { id: 6, title: "E-commerce Platform", description: "Full-stack e-commerce solution", githubUrl: "#" },
     { id: 7, title: "Brand Identity", description: "Complete brand identity system", githubUrl: "#" },
     { id: 8, title: "Web Application", description: "Interactive web application", githubUrl: "#" }
+  ];
+
+  const designProjects: DesignProject[] = [
+    { id: 1, title: "Brand Identity System", description: "Complete visual identity design for modern startup", figmaUrl: "#" },
+    { id: 2, title: "Mobile App Interface", description: "Clean and intuitive design for productivity app", figmaUrl: "#" },
+    { id: 3, title: "Web Dashboard UI", description: "Data visualization and analytics interface", figmaUrl: "#" },
+    { id: 4, title: "E-commerce Platform", description: "User-centered shopping experience design", figmaUrl: "#" },
+    { id: 5, title: "Event Website Design", description: "Modern event landing page with registration flow", figmaUrl: "#" },
+    { id: 6, title: "SaaS Product Interface", description: "Comprehensive design system for B2B platform", figmaUrl: "#" }
   ];
 
   return (
@@ -208,6 +224,44 @@ const SwissPortfolio = () => {
                   >
                     <Github className="w-4 h-4 inline mr-2" />
                     VIEW ON GITHUB
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="swiss-line mx-8"></div>
+
+      {/* Design Projects Section - Swiss Grid */}
+      <section id="design-projects" className="swiss-section">
+        <div className="grid grid-cols-12 gap-8">
+          <div className="col-span-3">
+            <h2 className="text-3xl swiss-title tracking-wide mb-8">DESIGN PROJECTS</h2>
+            <p className="swiss-body text-muted-foreground leading-relaxed">
+              Visual design solutions and interface concepts crafted with precision
+            </p>
+          </div>
+          <div className="col-span-9">
+            <div className="grid grid-cols-2 gap-8">
+              {designProjects.map((project, index) => (
+                <div key={project.id} className="swiss-card group">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl swiss-subtitle tracking-wide">{project.title}</h3>
+                    <span className="text-sm text-muted-foreground font-medium">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  <p className="swiss-body text-muted-foreground mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <button 
+                    className="swiss-button w-full text-sm tracking-wider"
+                    onClick={() => window.open(project.figmaUrl, '_blank')}
+                  >
+                    <Figma className="w-4 h-4 inline mr-2" />
+                    VIEW THE DESIGN
                   </button>
                 </div>
               ))}
