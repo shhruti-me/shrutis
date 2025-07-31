@@ -449,9 +449,6 @@ const SwissPortfolio = () => {
             <p className="text-sm text-muted-foreground tracking-wider">
               © 2025 SHRUTI
             </p>
-            <p className="text-sm text-muted-foreground tracking-wider">
-              DESIGNED WITH SYSTEMATIC PRECISION
-            </p>
           </div>
         </div>
       </footer>
