@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Figma, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface Experience {
   title: string;
@@ -12,6 +13,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
+  stack: string[];
   githubUrl: string;
 }
 
@@ -71,14 +73,62 @@ const SwissPortfolio = () => {
   ];
 
   const projects: Project[] = [
-    { id: 1, title: "Project Alpha", description: "Creative web application with modern design", githubUrl: "#" },
-    { id: 2, title: "Design System", description: "Comprehensive UI component library", githubUrl: "#" },
-    { id: 3, title: "Portfolio Website", description: "Personal portfolio with interactive elements", githubUrl: "#" },
-    { id: 4, title: "Mobile App UI", description: "Clean and intuitive mobile interface", githubUrl: "#" },
-    { id: 5, title: "Dashboard Design", description: "Data visualization dashboard", githubUrl: "#" },
-    { id: 6, title: "E-commerce Platform", description: "Full-stack e-commerce solution", githubUrl: "#" },
-    { id: 7, title: "Brand Identity", description: "Complete brand identity system", githubUrl: "#" },
-    { id: 8, title: "Web Application", description: "Interactive web application", githubUrl: "#" }
+    { 
+      id: 1, 
+      title: "Blockchain Content Authenticator", 
+      description: "Blockchain-based system for verifying digital content origin, authorship, and AI-driven tampering.", 
+      stack: ["Solidity", "IPFS", "Node.js", "React", "OpenAI API", "DeepAI/ImageHash", "Web3.js", "Python", "PostgreSQL"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 2, 
+      title: "Tata Autopilot Mechanic", 
+      description: "AI-powered AR assistant for DIY EV repair using computer vision and GPT-4 walkthroughs.", 
+      stack: ["Python", "React Native", "GPT-4", "YOLOv8", "ARCore", "Firebase"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 3, 
+      title: "DressFit", 
+      description: "Virtual try-on platform with 3D avatars, customizable clothing, and real-time AR-based draping.", 
+      stack: ["ReactJS", "Flask", "Ready Player Me API", "Blender", "WebGL", "AR"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 4, 
+      title: "NutriMate", 
+      description: "AI-based food tracker that analyzes meals via image recognition and gives nutrition insights.", 
+      stack: ["Flutter", "Flask", "TensorFlow", "Firebase", "REST APIs"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 5, 
+      title: "AI Feedback Generator", 
+      description: "Fine-tuned an LLM to generate academic feedback by curating and annotating educational datasets.", 
+      stack: ["Python", "NLP", "AI/ML", "Dataset Curation"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 6, 
+      title: "Budget Buddy", 
+      description: "Personal finance web app with live expense tracking, analytics, and JWT-secured login.", 
+      stack: ["ReactJS", "Flask", "MongoDB", "Chart.js", "JWT"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 7, 
+      title: "Secure File Encryption System", 
+      description: "Local FTP server with encrypted file handling and key-based secure downloads.", 
+      stack: ["Python", "Flask", "Cryptography"],
+      githubUrl: "#" 
+    },
+    { 
+      id: 8, 
+      title: "Viora Visual", 
+      description: "Designed and built UI for a SaaS landing page with responsive web components.", 
+      stack: ["HTML", "CSS", "JS", "Figma"],
+      githubUrl: "#" 
+    }
   ];
 
   const designProjects: DesignProject[] = [
@@ -91,7 +141,8 @@ const SwissPortfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground scroll-smooth">
+    <TooltipProvider>
+      <div className="min-h-screen bg-background text-foreground scroll-smooth">
       {/* Navigation - Responsive */}
       <nav className="fixed top-0 w-full bg-background border-b border-border z-50">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 md:py-6">
@@ -268,7 +319,23 @@ const SwissPortfolio = () => {
               {projects.map((project, index) => (
                 <div key={project.id} className="swiss-card group">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg md:text-xl swiss-subtitle tracking-wide">{project.title}</h3>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <h3 className="text-lg md:text-xl swiss-subtitle tracking-wide cursor-help">{project.title}</h3>
+                      </TooltipTrigger>
+                      <TooltipContent className="max-w-xs">
+                        <div className="p-2">
+                          <p className="text-xs font-semibold mb-2 tracking-wider">TECH STACK</p>
+                          <div className="flex flex-wrap gap-1">
+                            {project.stack.map((tech, i) => (
+                              <span key={i} className="text-xs bg-muted px-2 py-1 rounded-sm tracking-wide">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
                     <span className="text-sm text-muted-foreground font-medium">
                       {String(index + 1).padStart(2, '0')}
                     </span>
@@ -389,7 +456,8 @@ const SwissPortfolio = () => {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </TooltipProvider>
   );
 };
 
