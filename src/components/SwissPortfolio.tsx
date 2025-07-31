@@ -146,7 +146,7 @@ const SwissPortfolio = () => {
       {/* Navigation - Responsive */}
       <nav className="fixed top-0 w-full bg-background border-b border-border z-50">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 md:py-6">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-end items-center">
             {/* Logo/Brand */}
             
             {/* Desktop Navigation */}
