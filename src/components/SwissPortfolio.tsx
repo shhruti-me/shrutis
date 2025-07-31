@@ -31,7 +31,7 @@ const SwissPortfolio = () => {
     {
       title: "CEO & Creative Head",
       company: "Vioravisuals",
-      period: "2024 - Present",
+      period: "May 2025 - Present",
       description: ["Leading creative direction and strategic vision for a creative agency", "Overseeing innovative design solutions and client relationships"]
     },
     {
@@ -57,7 +57,7 @@ const SwissPortfolio = () => {
     {
       title: "UX Designer",
       company: "Google Developer Group (GDG)",
-      period: "Oct 2024 - Present",
+      period: "Oct 2024 - July 2025",
       description: [
         "Designed the official website UI for DevHouse'25, focusing on innovation and accessibility"
       ]
@@ -65,7 +65,7 @@ const SwissPortfolio = () => {
     {
       title: "Designer",
       company: "Designers Club VITC",
-      period: "Jul 2024 - Present",
+      period: "Jul 2024 - July 2025",
       description: [
         "Created visuals for social media content and updates"
       ]
@@ -228,7 +228,7 @@ const SwissPortfolio = () => {
           </div>
           <div className="md:col-span-4 text-left md:text-right mt-6 md:mt-0">
             <div className="swiss-emphasis inline-block text-sm tracking-wider">
-              PORTFOLIO / 2024
+              PORTFOLIO / 2025
             </div>
           </div>
         </div>
@@ -345,10 +345,10 @@ const SwissPortfolio = () => {
                   </p>
                   <button 
                     className="swiss-button w-full text-sm tracking-wider"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
+                    onClick={() => index < 2 ? {} : window.open(project.githubUrl, '_blank')}
                   >
                     <Github className="w-4 h-4 inline mr-2" />
-                    VIEW ON GITHUB
+                    {index < 2 ? 'ON PROGRESS' : 'VIEW ON GITHUB'}
                   </button>
                 </div>
               ))}
@@ -448,7 +448,7 @@ const SwissPortfolio = () => {
         <div className="max-w-screen-xl mx-auto px-8">
           <div className="flex justify-between items-center">
             <p className="text-sm text-muted-foreground tracking-wider">
-              © 2024 SHRUTI
+              © 2025 SHRUTI
             </p>
             <p className="text-sm text-muted-foreground tracking-wider">
               DESIGNED WITH SYSTEMATIC PRECISION
