@@ -148,7 +148,6 @@ const SwissPortfolio = () => {
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-4 md:py-6">
           <div className="flex justify-between items-center">
             {/* Logo/Brand */}
-            <div className="text-lg font-bold tracking-wider">SHRUTI</div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-8 text-sm font-medium tracking-wider uppercase">
