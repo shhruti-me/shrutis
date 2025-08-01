@@ -75,7 +75,7 @@ const SwissPortfolio = () => {
   const projects: Project[] = [
     { 
       id: 1, 
-      title: "Blockchain Content Authenticator", 
+      title: "AUTHX", 
       description: "Blockchain-based system for verifying digital content origin, authorship, and AI-driven tampering.", 
       stack: ["Solidity", "IPFS", "Node.js", "React", "OpenAI API", "DeepAI/ImageHash", "Web3.js", "Python", "PostgreSQL"],
       githubUrl: "#" 
