@@ -218,7 +218,7 @@ const SwissPortfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
             <h1 className="text-5xl md:text-8xl font-bold swiss-title leading-none tracking-tighter mb-4">
-              AUTHX
+              SHRUTI
             </h1>
             <div className="swiss-line mb-6"></div>
             <p className="text-base md:text-lg swiss-body max-w-2xl leading-relaxed">
@@ -447,7 +447,7 @@ const SwissPortfolio = () => {
         <div className="max-w-screen-xl mx-auto px-8">
           <div className="flex justify-between items-center">
             <p className="text-sm text-muted-foreground tracking-wider">
-              © 2025 AUTHX
+              © 2025 SHRUTI
             </p>
           </div>
         </div>
