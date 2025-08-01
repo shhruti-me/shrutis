@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Figma, Menu, X } from "lucide-react";
+import { Github, Linkedin, Mail, Figma, Menu, X, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -346,7 +346,11 @@ const SwissPortfolio = () => {
                     className="swiss-button w-full text-sm tracking-wider"
                     onClick={() => index < 2 ? {} : window.open(project.githubUrl, '_blank')}
                   >
-                    <Github className="w-4 h-4 inline mr-2" />
+                    {index < 2 ? (
+                      <Loader2 className="w-4 h-4 inline mr-2 animate-spin" />
+                    ) : (
+                      <Github className="w-4 h-4 inline mr-2" />
+                    )}
                     {index < 2 ? 'ON PROGRESS' : 'VIEW ON GITHUB'}
                   </button>
                 </div>
