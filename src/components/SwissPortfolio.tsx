@@ -99,33 +99,33 @@ const SwissPortfolio = () => {
   }];
   const designProjects: DesignProject[] = [{
     id: 1,
-    title: "Brand Identity System",
-    description: "Complete visual identity design for modern startup",
+    title: "Bitwars 3.0",
+    description: "Event website designed for IEEE Computer Society's annual tech showdown.",
     figmaUrl: "#"
   }, {
     id: 2,
-    title: "Mobile App Interface",
-    description: "Clean and intuitive design for productivity app",
+    title: "StreamFlex",
+    description: "Sleek landing and onboarding UI for a smart streaming platform.",
     figmaUrl: "#"
   }, {
     id: 3,
-    title: "Web Dashboard UI",
-    description: "Data visualization and analytics interface",
+    title: "BudgetBuddy",
+    description: "Clean, focused landing page for a personal finance tracker app.",
     figmaUrl: "#"
   }, {
     id: 4,
-    title: "E-commerce Platform",
-    description: "User-centered shopping experience design",
+    title: "CafeConnect",
+    description: "UI for booking cafes online, featuring smooth onboarding flow.",
     figmaUrl: "#"
   }, {
     id: 5,
-    title: "Event Website Design",
-    description: "Modern event landing page with registration flow",
+    title: "Seraphine Couture (UI)",
+    description: "Elegant landing page UI for a premium fashion label.",
     figmaUrl: "#"
   }, {
     id: 6,
-    title: "SaaS Product Interface",
-    description: "Comprehensive design system for B2B platform",
+    title: "Seraphine Couture (Branding)",
+    description: "Visual identity design capturing luxury and minimalism.",
     figmaUrl: "#"
   }];
   return <TooltipProvider>
