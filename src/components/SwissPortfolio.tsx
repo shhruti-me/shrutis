@@ -182,7 +182,7 @@ const SwissPortfolio = () => {
               SHRUTI
             </h1>
             <div className="swiss-line mb-6"></div>
-            <p className="text-base md:text-lg swiss-body max-w-2xl leading-relaxed">Designer & developer crafting smooth digital experiences -where smart dev meets playful creativity.</p>
+            <p className="text-base md:text-lg swiss-body max-w-2xl leading-relaxed">Designer & developer crafting smooth digital experiences - where smart dev meets playful creativity.</p>
           </div>
           <div className="md:col-span-4 text-left md:text-right mt-6 md:mt-0">
             <div className="swiss-emphasis inline-block text-sm tracking-wider">
