@@ -101,32 +101,32 @@ const SwissPortfolio = () => {
     id: 1,
     title: "Bitwars 3.0",
     description: "Event website designed for IEEE Computer Society's annual tech showdown.",
-    figmaUrl: "#"
+    figmaUrl: "https://www.figma.com/design/YIztJlPn7EyGoBMsmFaleL/IEEE-Bitwars-25?node-id=16-685&t=yXRUzRfshC3FC6p8-1"
   }, {
     id: 2,
     title: "StreamFlex",
     description: "Sleek landing and onboarding UI for a smart streaming platform.",
-    figmaUrl: "#"
+    figmaUrl: "https://www.figma.com/design/GFCpbYEBhJS3k3JWdWNH33/StreamFlex?node-id=0-1&t=VdERUSWQb1fVY320-1"
   }, {
     id: 3,
     title: "BudgetBuddy",
     description: "Clean, focused landing page for a personal finance tracker app.",
-    figmaUrl: "#"
+    figmaUrl: "https://www.figma.com/design/zaCRDKclGIKvMpYTkjhZCZ/BudgetBuddy?node-id=0-1&t=ej5eYU10Yq8lHw7Y-1"
   }, {
     id: 4,
     title: "CafeConnect",
     description: "UI for booking cafes online, featuring smooth onboarding flow.",
-    figmaUrl: "#"
+    figmaUrl: "https://www.figma.com/design/86A6EoN35BX3CZ9D2GVpZ0/CafeConnect?node-id=0-1&t=ykvuTWYhAUsp3pXk-1"
   }, {
     id: 5,
     title: "Seraphine Couture (UI)",
     description: "Elegant landing page UI for a premium fashion label.",
-    figmaUrl: "#"
+    figmaUrl: "https://www.figma.com/design/qeRCsEtZGRoCmoyZ0rhtJI/Seraphine-Couture--UI-?node-id=11-506&t=1ccbeJ7x22DoxfmJ-1"
   }, {
     id: 6,
-    title: "Seraphine Couture (Branding)",
-    description: "Visual identity design capturing luxury and minimalism.",
-    figmaUrl: "#"
+    title: "VioraVisuals",
+    description: "Landing page for a creative agency.",
+    figmaUrl: "https://www.figma.com/design/CABYRuEvqiUI2eAMzIT8Ex/Viora-visuals?node-id=0-1&t=0Wc3NJzMwNZNS8gx-1"
   }];
   return <TooltipProvider>
       <div className="min-h-screen bg-background text-foreground scroll-smooth">
