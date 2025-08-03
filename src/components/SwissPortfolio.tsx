@@ -65,13 +65,13 @@ const SwissPortfolio = () => {
     title: "DressFit",
     description: "Virtual try-on platform with 3D avatars, customizable clothing, and real-time AR-based draping.",
     stack: ["ReactJS", "Flask", "Ready Player Me API", "Blender", "WebGL", "AR"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/Dressfit"
   }, {
     id: 4,
     title: "NutriMate",
     description: "AI-based food tracker that analyzes meals via image recognition and gives nutrition insights.",
     stack: ["Flutter", "Flask", "TensorFlow", "Firebase", "REST APIs"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/Nutri-Mate"
   }, {
     id: 5,
     title: "AI Feedback Generator",
@@ -83,13 +83,13 @@ const SwissPortfolio = () => {
     title: "Budget Buddy",
     description: "Personal finance web app with live expense tracking, analytics, and JWT-secured login.",
     stack: ["ReactJS", "Flask", "MongoDB", "Chart.js", "JWT"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/Budget-Buddy"
   }, {
     id: 7,
     title: "Secure File Encryption System",
     description: "Local FTP server with encrypted file handling and key-based secure downloads.",
     stack: ["Python", "Flask", "Cryptography"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/SecureFile-Encryption-System"
   }, {
     id: 8,
     title: "Viora Visual",
