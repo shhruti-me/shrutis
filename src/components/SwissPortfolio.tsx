@@ -193,7 +193,7 @@ const SwissPortfolio = () => {
       </section>
 
       {/* About Section - Responsive Grid */}
-      <section id="about" className="swiss-section px-4 md:px-8">
+      <section id="about" className="swiss-section px-4 md:px-8 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">ABOUT</h2>
@@ -220,7 +220,7 @@ const SwissPortfolio = () => {
       <div className="swiss-line mx-4 md:mx-8"></div>
 
       {/* Experience Section - Responsive */}
-      <section id="experience" className="swiss-section px-4 md:px-8">
+      <section id="experience" className="swiss-section px-4 md:px-8 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">EXPERIENCE</h2>
@@ -254,7 +254,7 @@ const SwissPortfolio = () => {
       <div className="swiss-line mx-4 md:mx-8"></div>
 
       {/* Projects Section - Responsive Grid */}
-      <section id="projects" className="swiss-section px-4 md:px-8">
+      <section id="projects" className="swiss-section px-4 md:px-8 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">PROJECTS</h2>
@@ -301,7 +301,7 @@ const SwissPortfolio = () => {
       <div className="swiss-line mx-4 md:mx-8"></div>
 
       {/* Design Projects Section - Responsive Grid */}
-      <section id="design-projects" className="swiss-section px-4 md:px-8">
+      <section id="design-projects" className="swiss-section px-4 md:px-8 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">DESIGN PROJECTS</h2>
@@ -334,7 +334,7 @@ const SwissPortfolio = () => {
       <div className="swiss-line mx-4 md:mx-8"></div>
 
       {/* Contact Section - Responsive */}
-      <section id="contact" className="swiss-section px-4 md:px-8">
+      <section id="contact" className="swiss-section px-4 md:px-8 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <h2 className="text-3xl md:text-3xl font-bold swiss-title tracking-wide mb-8">CONTACT</h2>
