@@ -62,22 +62,22 @@ const SwissPortfolio = () => {
     githubUrl: "#"
   }, {
     id: 3,
+    title: "AI Feedback Generator",
+    description: "Fine-tuned an LLM to generate academic feedback by curating and annotating educational datasets.",
+    stack: ["Python", "NLP", "AI/ML", "Dataset Curation"],
+    githubUrl: "#"
+  }, {
+    id: 4,
     title: "DressFit",
     description: "Virtual try-on platform with 3D avatars, customizable clothing, and real-time AR-based draping.",
     stack: ["ReactJS", "Flask", "Ready Player Me API", "Blender", "WebGL", "AR"],
     githubUrl: "https://github.com/shhruti-me/Dressfit"
   }, {
-    id: 4,
+    id: 5,
     title: "NutriMate",
     description: "AI-based food tracker that analyzes meals via image recognition and gives nutrition insights.",
     stack: ["Flutter", "Flask", "TensorFlow", "Firebase", "REST APIs"],
     githubUrl: "https://github.com/shhruti-me/Nutri-Mate"
-  }, {
-    id: 5,
-    title: "AI Feedback Generator",
-    description: "Fine-tuned an LLM to generate academic feedback by curating and annotating educational datasets.",
-    stack: ["Python", "NLP", "AI/ML", "Dataset Curation"],
-    githubUrl: "#"
   }, {
     id: 6,
     title: "Budget Buddy",
@@ -288,9 +288,9 @@ const SwissPortfolio = () => {
                   <p className="swiss-body text-muted-foreground mb-6 leading-relaxed">
                     {project.description}
                   </p>
-                  <button className="swiss-button w-full text-sm tracking-wider" onClick={() => index < 2 ? {} : window.open(project.githubUrl, '_blank')}>
-                    {index < 2 ? <Loader2 className="w-4 h-4 inline mr-2 animate-spin" /> : <Github className="w-4 h-4 inline mr-2" />}
-                    {index < 2 ? 'ON PROGRESS' : 'VIEW ON GITHUB'}
+                  <button className="swiss-button w-full text-sm tracking-wider" onClick={() => index < 3 ? {} : window.open(project.githubUrl, '_blank')}>
+                    {index < 3 ? <Loader2 className="w-4 h-4 inline mr-2 animate-spin" /> : <Github className="w-4 h-4 inline mr-2" />}
+                    {index < 3 ? 'ON PROGRESS' : 'VIEW ON GITHUB'}
                   </button>
                 </div>)}
             </div>
