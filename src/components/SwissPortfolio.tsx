@@ -56,7 +56,7 @@ const SwissPortfolio = () => {
     githubUrl: "#"
   }, {
     id: 2,
-    title: "Tata Autopilot Mechanic",
+    title: "Autopilot Mechanic",
     description: "AI-powered AR assistant for DIY EV repair using computer vision and GPT-4 walkthroughs.",
     stack: ["Python", "React Native", "GPT-4", "YOLOv8", "ARCore", "Firebase"],
     githubUrl: "#"
