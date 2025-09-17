@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail, Figma, Menu, X, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import plantIcon from "@/assets/plant-icon.png";
 interface Experience {
   title: string;
   company: string;
@@ -178,9 +179,12 @@ const SwissPortfolio = () => {
       <section className="pt-32 pb-16 px-4 md:px-8 max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
-            <h1 className="text-5xl md:text-8xl font-bold swiss-title leading-none tracking-tighter mb-4">
-              SHRUTI
-            </h1>
+            <div className="flex items-center gap-4 mb-4">
+              <img src={plantIcon} alt="Plant icon" className="w-12 h-12 md:w-16 md:h-16 pixelated" />
+              <h1 className="text-5xl md:text-8xl font-bold swiss-title leading-none tracking-tighter">
+                SHRUTI
+              </h1>
+            </div>
             <div className="swiss-line mb-6"></div>
             <p className="text-base md:text-lg swiss-body max-w-2xl leading-relaxed">Designer & developer crafting smooth digital experiences - where smart dev meets playful creativity.</p>
           </div>
