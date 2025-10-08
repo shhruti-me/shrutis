@@ -24,11 +24,6 @@ interface DesignProject {
 const SwissPortfolio = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const experiences: Experience[] = [{
-    title: "CEO & Creative Head",
-    company: "Vioravisuals",
-    period: "May 2025 - Present",
-    description: ["Leading creative direction and strategic vision for a creative agency", "Overseeing innovative design solutions and client relationships"]
-  }, {
     title: "Summer Research Intern",
     company: "VIT Chennai",
     period: "June 2025 - Present",
