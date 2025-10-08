@@ -35,7 +35,7 @@ const SwissPortfolio = () => {
   }, {
     title: "Summer Research Intern",
     company: "VIT Chennai",
-    period: "June 2025 - Present",
+    period: "May 2025 - July 2025",
     description: ["Fine-tuned a language model to generate feedback for descriptive answers in CS exams", "Curated and labelled datasets from student responses to improve training quality", "Collaborated on optimizing model output and educational value"]
   }, {
     title: "UI/UX & Design Lead",
