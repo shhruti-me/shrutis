@@ -26,7 +26,7 @@ const SwissPortfolio = () => {
   const experiences: Experience[] = [{
     title: "Cybersecurity Intern",
     company: "Shakta Technologies PVT LTD",
-    period: "MAY 2025 TO JULY 2025",
+    period: "May 2025 - June 2025",
     description: [
       "Conducted penetration testing to identify and exploit security weaknesses in web applications",
       "Perform vulnerability assessments on Application Programming Interfaces (APIs), ensuring secure authentication and data protection",
