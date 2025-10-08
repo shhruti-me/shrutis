@@ -24,6 +24,15 @@ interface DesignProject {
 const SwissPortfolio = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const experiences: Experience[] = [{
+    title: "Cybersecurity Intern",
+    company: "Shakta Technologies PVT LTD",
+    period: "May 2025 - June 2025",
+    description: [
+      "Conducted penetration testing to identify and exploit security weaknesses in web applications",
+      "Perform vulnerability assessments on Application Programming Interfaces (APIs), ensuring secure authentication and data protection",
+      "Collaborated with the security team to document findings and recommend mitigation strategies"
+    ]
+  }, {
     title: "Summer Research Intern",
     company: "VIT Chennai",
     period: "June 2025 - Present",
