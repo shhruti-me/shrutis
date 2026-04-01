@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Figma, Menu, X, Loader2 } from "lucide-react";
+import { Github, Linkedin, Mail, Figma, Menu, X, Loader2, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import plantIcon from "@/assets/plant-icon.png";
@@ -58,7 +58,7 @@ const SwissPortfolio = () => {
     title: "AUTHX",
     description: "Blockchain-based system for verifying digital content origin, authorship, and AI-driven tampering.",
     stack: ["Solidity", "IPFS", "Node.js", "React", "OpenAI API", "DeepAI/ImageHash", "Web3.js", "Python", "PostgreSQL"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/authx"
   }, {
     id: 2,
     title: "Autopilot Mechanic",
@@ -70,7 +70,7 @@ const SwissPortfolio = () => {
     title: "AI Feedback Generator",
     description: "Fine-tuned an LLM to generate academic feedback by curating and annotating educational datasets.",
     stack: ["Python", "NLP", "AI/ML", "Dataset Curation"],
-    githubUrl: "#"
+    githubUrl: "https://drive.google.com/file/d/1JfAOxemtn8h1ir32qAvkDhZJ8RCTNCj2/view?usp=sharing"
   }, {
     id: 4,
     title: "DressFit",
@@ -296,9 +296,17 @@ const SwissPortfolio = () => {
                   <p className="swiss-body text-muted-foreground mb-6 leading-relaxed">
                     {project.description}
                   </p>
-                  <button className="swiss-button w-full text-sm tracking-wider" onClick={() => index < 3 ? {} : window.open(project.githubUrl, '_blank')}>
-                    {index < 3 ? <Loader2 className="w-4 h-4 inline mr-2 animate-spin" /> : <Github className="w-4 h-4 inline mr-2" />}
-                    {index < 3 ? 'ON PROGRESS' : 'VIEW ON GITHUB'}
+                  <button className="swiss-button w-full text-sm tracking-wider" onClick={() => {
+                      if (project.githubUrl === '#') return;
+                      window.open(project.githubUrl, '_blank');
+                    }}>
+                    {project.githubUrl === '#' ? (
+                      <><Loader2 className="w-4 h-4 inline mr-2 animate-spin" />ON PROGRESS</>
+                    ) : project.githubUrl.includes('drive.google.com') ? (
+                      <><ExternalLink className="w-4 h-4 inline mr-2" />VIEW CERTIFICATE</>
+                    ) : (
+                      <><Github className="w-4 h-4 inline mr-2" />VIEW ON GITHUB</>
+                    )}
                   </button>
                 </div>)}
             </div>
