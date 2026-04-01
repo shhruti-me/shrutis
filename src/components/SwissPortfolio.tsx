@@ -100,7 +100,7 @@ const SwissPortfolio = () => {
     title: "Viora Visual",
     description: "Designed and built UI for a SaaS landing page with responsive web components.",
     stack: ["HTML", "CSS", "JS", "Figma"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/viora-visual"
   }];
   const designProjects: DesignProject[] = [{
     id: 1,
