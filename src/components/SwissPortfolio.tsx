@@ -58,7 +58,7 @@ const SwissPortfolio = () => {
     title: "AUTHX",
     description: "Blockchain-based system for verifying digital content origin, authorship, and AI-driven tampering.",
     stack: ["Solidity", "IPFS", "Node.js", "React", "OpenAI API", "DeepAI/ImageHash", "Web3.js", "Python", "PostgreSQL"],
-    githubUrl: "#"
+    githubUrl: "https://github.com/shhruti-me/authx"
   }, {
     id: 2,
     title: "Autopilot Mechanic",
