@@ -70,7 +70,7 @@ const SwissPortfolio = () => {
     title: "AI Feedback Generator",
     description: "Fine-tuned an LLM to generate academic feedback by curating and annotating educational datasets.",
     stack: ["Python", "NLP", "AI/ML", "Dataset Curation"],
-    githubUrl: "#"
+    githubUrl: "https://drive.google.com/file/d/1JfAOxemtn8h1ir32qAvkDhZJ8RCTNCj2/view?usp=sharing"
   }, {
     id: 4,
     title: "DressFit",
