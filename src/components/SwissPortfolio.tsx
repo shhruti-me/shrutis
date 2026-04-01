@@ -296,9 +296,17 @@ const SwissPortfolio = () => {
                   <p className="swiss-body text-muted-foreground mb-6 leading-relaxed">
                     {project.description}
                   </p>
-                  <button className="swiss-button w-full text-sm tracking-wider" onClick={() => index < 3 ? {} : window.open(project.githubUrl, '_blank')}>
-                    {index < 3 ? <Loader2 className="w-4 h-4 inline mr-2 animate-spin" /> : <Github className="w-4 h-4 inline mr-2" />}
-                    {index < 3 ? 'ON PROGRESS' : 'VIEW ON GITHUB'}
+                  <button className="swiss-button w-full text-sm tracking-wider" onClick={() => {
+                      if (project.githubUrl === '#') return;
+                      window.open(project.githubUrl, '_blank');
+                    }}>
+                    {project.githubUrl === '#' ? (
+                      <><Loader2 className="w-4 h-4 inline mr-2 animate-spin" />ON PROGRESS</>
+                    ) : project.githubUrl.includes('drive.google.com') ? (
+                      <><ExternalLink className="w-4 h-4 inline mr-2" />VIEW CERTIFICATE</>
+                    ) : (
+                      <><Github className="w-4 h-4 inline mr-2" />VIEW ON GITHUB</>
+                    )}
                   </button>
                 </div>)}
             </div>
