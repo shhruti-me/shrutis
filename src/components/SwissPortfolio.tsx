@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Figma, Menu, X, Loader2 } from "lucide-react";
+import { Github, Linkedin, Mail, Figma, Menu, X, Loader2, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import plantIcon from "@/assets/plant-icon.png";
