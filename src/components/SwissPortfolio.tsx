@@ -142,12 +142,13 @@ const SwissPortfolio = () => {
             {/* Logo/Brand */}
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex gap-8 text-sm font-medium tracking-wider uppercase">
+            <div className="hidden md:flex gap-8 text-sm font-medium tracking-wider uppercase items-center">
               <a href="#about" className="hover:bg-primary hover:text-primary-foreground px-3 py-1 transition-all">About</a>
               <a href="#experience" className="hover:bg-primary hover:text-primary-foreground px-3 py-1 transition-all">Experience</a>
               <a href="#projects" className="hover:bg-primary hover:text-primary-foreground px-3 py-1 transition-all">Projects</a>
               <a href="#design-projects" className="hover:bg-primary hover:text-primary-foreground px-3 py-1 transition-all">Design</a>
               <a href="#contact" className="hover:bg-primary hover:text-primary-foreground px-3 py-1 transition-all">Contact</a>
+              <a href="https://drive.google.com/file/d/14eodSf5ArpMnxt_pTyEfiAD870ti3fYJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-4 py-1.5 transition-all hover:opacity-90">Resume</a>
             </div>
 
             {/* Mobile Menu Button */}
