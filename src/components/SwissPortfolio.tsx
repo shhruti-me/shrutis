@@ -175,6 +175,9 @@ const SwissPortfolio = () => {
                 <a href="#contact" className="hover:bg-primary hover:text-primary-foreground px-3 py-2 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
                   Contact
                 </a>
+                <a href="https://drive.google.com/file/d/14eodSf5ArpMnxt_pTyEfiAD870ti3fYJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-3 py-2 transition-all text-center" onClick={() => setIsMobileMenuOpen(false)}>
+                  Resume
+                </a>
               </div>
             </div>}
         </div>
