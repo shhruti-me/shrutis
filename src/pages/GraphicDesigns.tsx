@@ -12,6 +12,9 @@ import work07 from "@/assets/gd/07-pcb-workshop.png";
 import work08 from "@/assets/gd/08-game-jam.png";
 import work09 from "@/assets/gd/09-call-for-proposal.png";
 import work10 from "@/assets/gd/10-recruitments.png";
+import work11 from "@/assets/gd/11-bitwars.png";
+import work12 from "@/assets/gd/12-cert-appreciation.png";
+import work13 from "@/assets/gd/13-cert-paradox.png";
 
 type Category = "All Projects" | "Social Media Posts" | "Posters" | "Certificates" | "Tshirt Design";
 
