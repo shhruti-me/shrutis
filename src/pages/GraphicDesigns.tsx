@@ -12,6 +12,9 @@ import work07 from "@/assets/gd/07-pcb-workshop.png";
 import work08 from "@/assets/gd/08-game-jam.png";
 import work09 from "@/assets/gd/09-call-for-proposal.png";
 import work10 from "@/assets/gd/10-recruitments.png";
+import work11 from "@/assets/gd/11-bitwars.png";
+import work12 from "@/assets/gd/12-cert-appreciation.png";
+import work13 from "@/assets/gd/13-cert-paradox.png";
 
 type Category = "All Projects" | "Social Media Posts" | "Posters" | "Certificates" | "Tshirt Design";
 
@@ -26,9 +29,9 @@ interface Work {
 const works: Work[] = [
   {
     id: 1,
-    title: "CompSoc Chairperson",
-    description: "A bold cyberpunk-inspired chairperson reveal poster for IEEE CompSoc, blending fragmented anime portraiture with barcode and checker motifs to capture the spirit of build-what-you-use.",
-    category: "Posters",
+    title: "CompSoc Chairperson Tee",
+    description: "A bold cyberpunk t-shirt graphic for the IEEE CompSoc Chairperson, fragmenting an anime portrait through barcodes and checker motifs around the rallying line — we build what you use.",
+    category: "Tshirt Design",
     image: work01,
   },
   {
@@ -93,6 +96,27 @@ const works: Work[] = [
     description: "A teaser poster built around iridescent CD-surface textures, inviting the campus into projects, workshops, and a community that ships ideas.",
     category: "Posters",
     image: work10,
+  },
+  {
+    id: 11,
+    title: "BitWars 2.0",
+    description: "A widescreen event banner for the BitWars 2.0 competitive coding contest — a 3D chrome logotype anchored in a fractured, neon wireframe arena built for high-stakes battle energy.",
+    category: "Posters",
+    image: work11,
+  },
+  {
+    id: 12,
+    title: "Certificate of Appreciation",
+    description: "An elegant dark certificate of appreciation for HackHub '25 organizers, balancing silver and gold metallic typography with a geometric hex-pattern border for a premium, ceremonial feel.",
+    category: "Certificates",
+    image: work12,
+  },
+  {
+    id: 13,
+    title: "Paradox CTF Certificate",
+    description: "A playful pixel-art certificate for participants of Paradox, a 24-hour cryptic-hunt CTF — combining game-style typography and a retro landscape to match the puzzle-quest spirit of the event.",
+    category: "Certificates",
+    image: work13,
   },
 ];
 
