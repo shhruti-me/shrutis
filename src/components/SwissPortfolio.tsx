@@ -334,9 +334,9 @@ const SwissPortfolio = () => {
                 GRAPHIC<br />DESIGNS
               </h3>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="text-sm tracking-wider uppercase">View Works</span>
-              <ArrowUpRight className="w-8 h-8 md:w-12 md:h-12 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            <div className="flex items-center gap-2">
+              <span className="text-xs tracking-wider uppercase">View Works</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </div>
           </div>
         </Link>
