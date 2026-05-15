@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail, Figma, Menu, X, Loader2, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, Figma, Menu, X, Loader2, ExternalLink, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import plantIcon from "@/assets/plant-icon.png";
 interface Experience {
@@ -316,6 +317,29 @@ const SwissPortfolio = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <div className="swiss-line mx-4 md:mx-8"></div>
+
+      {/* Graphic Designs Banner */}
+      <section className="px-4 md:px-8 py-12">
+        <Link
+          to="/graphic-designs"
+          className="group block relative overflow-hidden border border-border bg-primary text-primary-foreground transition-all hover:opacity-95"
+        >
+          <div className="px-6 md:px-12 py-12 md:py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p className="text-xs md:text-sm tracking-[0.3em] uppercase opacity-70 mb-3">Explore the gallery</p>
+              <h3 className="text-3xl md:text-6xl font-bold swiss-title tracking-tighter leading-none">
+                GRAPHIC<br />DESIGNS
+              </h3>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-sm tracking-wider uppercase">View Works</span>
+              <ArrowUpRight className="w-8 h-8 md:w-12 md:h-12 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </div>
+          </div>
+        </Link>
       </section>
 
       <div className="swiss-line mx-4 md:mx-8"></div>
