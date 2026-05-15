@@ -2,6 +2,17 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
+import work01 from "@/assets/gd/01-compsoc-chair.png";
+import work02 from "@/assets/gd/02-design-department.png";
+import work03 from "@/assets/gd/03-compsoc-logo.png";
+import work04 from "@/assets/gd/04-board-2025.png";
+import work05 from "@/assets/gd/05-shruti-design-lead.png";
+import work06 from "@/assets/gd/06-hackhub.png";
+import work07 from "@/assets/gd/07-pcb-workshop.png";
+import work08 from "@/assets/gd/08-game-jam.png";
+import work09 from "@/assets/gd/09-call-for-proposal.png";
+import work10 from "@/assets/gd/10-recruitments.png";
+
 type Category = "All Projects" | "Social Media Posts" | "Posters" | "Certificates" | "Tshirt Design";
 
 interface Work {
@@ -12,24 +23,86 @@ interface Work {
   image: string;
 }
 
-// 13 placeholder works — replace images later
 const works: Work[] = [
-  { id: 1, title: "Work 01", description: "Placeholder description for this design piece.", category: "Social Media Posts", image: "https://picsum.photos/seed/gd1/800/800" },
-  { id: 2, title: "Work 02", description: "Placeholder description for this design piece.", category: "Posters", image: "https://picsum.photos/seed/gd2/800/800" },
-  { id: 3, title: "Work 03", description: "Placeholder description for this design piece.", category: "Certificates", image: "https://picsum.photos/seed/gd3/800/800" },
-  { id: 4, title: "Work 04", description: "Placeholder description for this design piece.", category: "Tshirt Design", image: "https://picsum.photos/seed/gd4/800/800" },
-  { id: 5, title: "Work 05", description: "Placeholder description for this design piece.", category: "Social Media Posts", image: "https://picsum.photos/seed/gd5/800/800" },
-  { id: 6, title: "Work 06", description: "Placeholder description for this design piece.", category: "Posters", image: "https://picsum.photos/seed/gd6/800/800" },
-  { id: 7, title: "Work 07", description: "Placeholder description for this design piece.", category: "Social Media Posts", image: "https://picsum.photos/seed/gd7/800/800" },
-  { id: 8, title: "Work 08", description: "Placeholder description for this design piece.", category: "Certificates", image: "https://picsum.photos/seed/gd8/800/800" },
-  { id: 9, title: "Work 09", description: "Placeholder description for this design piece.", category: "Posters", image: "https://picsum.photos/seed/gd9/800/800" },
-  { id: 10, title: "Work 10", description: "Placeholder description for this design piece.", category: "Tshirt Design", image: "https://picsum.photos/seed/gd10/800/800" },
-  { id: 11, title: "Work 11", description: "Placeholder description for this design piece.", category: "Social Media Posts", image: "https://picsum.photos/seed/gd11/800/800" },
-  { id: 12, title: "Work 12", description: "Placeholder description for this design piece.", category: "Posters", image: "https://picsum.photos/seed/gd12/800/800" },
-  { id: 13, title: "Work 13", description: "Placeholder description for this design piece.", category: "Certificates", image: "https://picsum.photos/seed/gd13/800/800" },
+  {
+    id: 1,
+    title: "CompSoc Chairperson",
+    description: "A bold cyberpunk-inspired chairperson reveal poster for IEEE CompSoc, blending fragmented anime portraiture with barcode and checker motifs to capture the spirit of build-what-you-use.",
+    category: "Posters",
+    image: work01,
+  },
+  {
+    id: 2,
+    title: "Design Department",
+    description: "Halftone hands meeting in a digital spark — an introduction post for the Design Department, channelling retro print textures and a vivid emerald palette.",
+    category: "Social Media Posts",
+    image: work02,
+  },
+  {
+    id: 3,
+    title: "CompSoc Identity",
+    description: "Brand identity treatment for IEEE CompSoc, layering the society monogram over a rhythmic typographic field that reinforces presence and recall.",
+    category: "Social Media Posts",
+    image: work03,
+  },
+  {
+    id: 4,
+    title: "Board 2025",
+    description: "An announcement poster for the 2025 board, using warped grids and stacked typography to introduce a new chapter with kinetic energy.",
+    category: "Social Media Posts",
+    image: work04,
+  },
+  {
+    id: 5,
+    title: "Shruti — Design Lead",
+    description: "A self-introduction post as Design Lead, mixing repeating display type, hand-typed callouts, and a soft glow cutout for an editorial-meets-personal feel.",
+    category: "Social Media Posts",
+    image: work05,
+  },
+  {
+    id: 6,
+    title: "HackHub 2025",
+    description: "Flagship hackathon poster — sweeping radial textures, ambient keywords, and angular logotype designed to feel like the cover of a tech publication.",
+    category: "Posters",
+    image: work06,
+  },
+  {
+    id: 7,
+    title: "PCB Workshop",
+    description: "A terminal-styled workshop poster grounded in circuitry imagery and dot-matrix typography, communicating the hands-on, hardware nature of the session.",
+    category: "Posters",
+    image: work07,
+  },
+  {
+    id: 8,
+    title: "Game Jam",
+    description: "X-ray Game Boy artwork paired with vertical pixel typography for the Game Jam workshop and event — playful, nostalgic, and unmistakably gaming.",
+    category: "Posters",
+    image: work08,
+  },
+  {
+    id: 9,
+    title: "Call for Proposal",
+    description: "An IDE-inspired poster styled as a JavaScript file, turning event details into syntax-highlighted code and tabular comments for a developer audience.",
+    category: "Posters",
+    image: work09,
+  },
+  {
+    id: 10,
+    title: "Recruitments Opening Soon",
+    description: "A teaser poster built around iridescent CD-surface textures, inviting the campus into projects, workshops, and a community that ships ideas.",
+    category: "Posters",
+    image: work10,
+  },
 ];
 
 const categories: Category[] = ["All Projects", "Social Media Posts", "Posters", "Certificates", "Tshirt Design"];
+
+// Theme tokens (scoped to this page)
+const BG = "hsl(160 50% 6%)";
+const FG = "hsl(150 60% 88%)";
+const ACCENT = "hsl(158 70% 45%)";
+const MUTED = "hsl(150 15% 55%)";
 
 const GraphicDesigns = () => {
   const [active, setActive] = useState<Category>("All Projects");
@@ -71,8 +144,7 @@ const GraphicDesigns = () => {
   const revealedWork = works.find((w) => w.id === revealedId);
 
   return (
-    <div className="min-h-screen text-[hsl(40_30%_92%)]" style={{ background: "hsl(225 60% 8%)" }}>
-      {/* SVG filter for fluid distortion on hover */}
+    <div className="min-h-screen" style={{ background: BG, color: FG }}>
       <svg className="absolute w-0 h-0" aria-hidden="true">
         <defs>
           <filter id="fluid-distort">
@@ -84,14 +156,13 @@ const GraphicDesigns = () => {
         </defs>
       </svg>
 
-      {/* Top bar */}
-      <header className="fixed top-0 inset-x-0 z-40 px-6 md:px-10 py-5 flex items-center justify-between" style={{ background: "hsl(225 60% 8% / 0.85)", backdropFilter: "blur(8px)" }}>
+      <header className="fixed top-0 inset-x-0 z-40 px-6 md:px-10 py-5 flex items-center justify-between" style={{ background: `${BG.slice(0, -1)} / 0.85)`.replace("hsl", "hsl"), backdropFilter: "blur(8px)" }}>
         <Link to="/" className="flex items-center gap-2 text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
           <ArrowLeft className="w-4 h-4" />
           Menu
         </Link>
         <h1 className="text-xl md:text-2xl tracking-tight" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}>
-          graphic<span className="opacity-70">designs</span>
+          graphic<span style={{ color: ACCENT }}>designs</span>
         </h1>
         <a href="mailto:shrutiselvakkumar06@gmail.com" className="text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
           Let's chat →
@@ -99,7 +170,6 @@ const GraphicDesigns = () => {
       </header>
 
       <div className="pt-24 md:pt-28 pb-20 px-6 md:px-10 grid grid-cols-12 gap-6 md:gap-10 max-w-[1600px] mx-auto">
-        {/* Left: category list */}
         <aside className="col-span-12 md:col-span-2 md:sticky md:top-28 md:self-start">
           <ul className="space-y-2 text-sm" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}>
             {categories.map((cat) => {
@@ -108,19 +178,19 @@ const GraphicDesigns = () => {
                 <li key={cat}>
                   <button
                     onClick={() => setActive(cat)}
-                    className={`flex items-baseline justify-between w-full text-left transition-all ${isActive ? "text-[hsl(40_30%_92%)]" : "text-[hsl(40_15%_55%)] hover:text-[hsl(40_30%_85%)]"}`}
+                    className="flex items-baseline justify-between w-full text-left transition-all"
+                    style={{ color: isActive ? ACCENT : MUTED }}
                   >
                     <span className="text-base">{cat}</span>
-                    <span className="text-xs tabular-nums ml-3">{String(counts[cat]).padStart(2, "0")}</span>
+                    <span className="text-xs tabular-nums ml-3">{String(counts[cat] ?? 0).padStart(2, "0")}</span>
                   </button>
-                  {isActive && <div className="h-px bg-[hsl(40_30%_92%)] mt-1 w-12" />}
+                  {isActive && <div className="h-px mt-1 w-12" style={{ background: ACCENT }} />}
                 </li>
               );
             })}
           </ul>
         </aside>
 
-        {/* Center: gallery */}
         <main className="col-span-12 md:col-span-7">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {filtered.map((work, idx) => {
@@ -143,14 +213,13 @@ const GraphicDesigns = () => {
                       transform: isHovered ? "scale(1.04)" : "scale(1)",
                     }}
                   />
-                  {/* Title overlay shown on hover */}
                   <div
                     className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300"
-                    style={{ opacity: isHovered ? 1 : 0, background: "hsl(225 60% 8% / 0.25)" }}
+                    style={{ opacity: isHovered ? 1 : 0, background: "hsl(160 50% 4% / 0.35)" }}
                   >
                     <span
-                      className="text-[hsl(40_40%_82%)] text-2xl md:text-4xl text-center px-4"
-                      style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", textShadow: "0 2px 24px hsl(225 60% 4% / 0.6)" }}
+                      className="text-2xl md:text-4xl text-center px-4"
+                      style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: FG }}
                     >
                       {work.title}
                     </span>
@@ -161,21 +230,17 @@ const GraphicDesigns = () => {
           </div>
         </main>
 
-        {/* Right: revealed description after 2s hover */}
         <aside className="hidden md:block col-span-3 md:sticky md:top-28 md:self-start">
-          <div
-            className="transition-opacity duration-500"
-            style={{ opacity: revealedWork ? 1 : 0 }}
-          >
+          <div className="transition-opacity duration-500" style={{ opacity: revealedWork ? 1 : 0 }}>
             {revealedWork && (
               <>
-                <p className="text-xs tracking-[0.25em] uppercase text-[hsl(40_15%_55%)] mb-3">
+                <p className="text-xs tracking-[0.25em] uppercase mb-3" style={{ color: ACCENT }}>
                   {revealedWork.category}
                 </p>
                 <h2 className="text-2xl mb-4 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   {revealedWork.title}
                 </h2>
-                <p className="text-sm leading-relaxed text-[hsl(40_20%_75%)]">
+                <p className="text-sm leading-relaxed" style={{ color: "hsl(150 20% 78%)" }}>
                   {revealedWork.description}
                 </p>
               </>
