@@ -4,8 +4,6 @@ import { ArrowLeft } from "lucide-react";
 
 import work01 from "@/assets/gd/01-compsoc-chair.png";
 import work02 from "@/assets/gd/02-design-department.png";
-import work03 from "@/assets/gd/03-compsoc-logo.png";
-import work04 from "@/assets/gd/04-board-2025.png";
 import work05 from "@/assets/gd/05-shruti-design-lead.png";
 import work06 from "@/assets/gd/06-hackhub.png";
 import work07 from "@/assets/gd/07-pcb-workshop.png";
@@ -29,92 +27,78 @@ interface Work {
 const works: Work[] = [
   {
     id: 1,
-    title: "CompSoc Chairperson Tee",
-    description: "A bold cyberpunk t-shirt graphic for the IEEE CompSoc Chairperson, fragmenting an anime portrait through barcodes and checker motifs around the rallying line — we build what you use.",
+    title: "club tshirt",
+    description: "a tee for the chair. mostly noise, a little message.",
     category: "Tshirt Design",
     image: work01,
   },
   {
     id: 2,
-    title: "Design Department",
-    description: "Halftone hands meeting in a digital spark — an introduction post for the Design Department, channelling retro print textures and a vivid emerald palette.",
+    title: "club member reveal post",
+    description: "introducing the design crew. nothing too loud.",
     category: "Social Media Posts",
     image: work02,
   },
   {
-    id: 3,
-    title: "CompSoc Identity",
-    description: "Brand identity treatment for IEEE CompSoc, layering the society monogram over a rhythmic typographic field that reinforces presence and recall.",
-    category: "Social Media Posts",
-    image: work03,
-  },
-  {
-    id: 4,
-    title: "Board 2025",
-    description: "An announcement poster for the 2025 board, using warped grids and stacked typography to introduce a new chapter with kinetic energy.",
-    category: "Social Media Posts",
-    image: work04,
-  },
-  {
     id: 5,
-    title: "Shruti — Design Lead",
-    description: "A self-introduction post as Design Lead, mixing repeating display type, hand-typed callouts, and a soft glow cutout for an editorial-meets-personal feel.",
+    title: "club board member reveal",
+    description: "board reveal post. felt right to keep it a little warped.",
     category: "Social Media Posts",
     image: work05,
   },
   {
     id: 6,
-    title: "HackHub 2025",
-    description: "Flagship hackathon poster — sweeping radial textures, ambient keywords, and angular logotype designed to feel like the cover of a tech publication.",
+    title: "hackhub'25 poster",
+    description: "poster for hackhub '25. mostly typography, some weather.",
     category: "Posters",
     image: work06,
   },
   {
     id: 7,
-    title: "PCB Workshop",
-    description: "A terminal-styled workshop poster grounded in circuitry imagery and dot-matrix typography, communicating the hands-on, hardware nature of the session.",
+    title: "pcb workshop poster",
+    description: "for a hands-on pcb session. terminal energy.",
     category: "Posters",
     image: work07,
   },
   {
     id: 8,
-    title: "Game Jam",
-    description: "X-ray Game Boy artwork paired with vertical pixel typography for the Game Jam workshop and event — playful, nostalgic, and unmistakably gaming.",
+    title: "gamejam poster",
+    description: "gameboy x-ray. made for the jam.",
     category: "Posters",
     image: work08,
   },
   {
     id: 9,
-    title: "Call for Proposal",
-    description: "An IDE-inspired poster styled as a JavaScript file, turning event details into syntax-highlighted code and tabular comments for a developer audience.",
+    title: "cfp poster",
+    description: "call for proposals, dressed up as a js file.",
     category: "Posters",
     image: work09,
   },
   {
     id: 10,
-    title: "Recruitments Opening Soon",
-    description: "A teaser poster built around iridescent CD-surface textures, inviting the campus into projects, workshops, and a community that ships ideas.",
+    title: "recruitment poster",
+    description: "teaser for recruitments. shiny disc, vague promise.",
     category: "Posters",
     image: work10,
   },
   {
     id: 11,
-    title: "BitWars 2.0",
-    description: "A widescreen event banner for the BitWars 2.0 competitive coding contest — a 3D chrome logotype anchored in a fractured, neon wireframe arena built for high-stakes battle energy.",
+    title: "bitwars 2.0 post",
+    description: "competitive coding banner. chrome and wires.",
     category: "Posters",
     image: work11,
   },
   {
     id: 12,
-    title: "Certificate of Appreciation",
-    description: "An elegant dark certificate of appreciation for HackHub '25 organizers, balancing silver and gold metallic typography with a geometric hex-pattern border for a premium, ceremonial feel.",
+    title: "hackhub'25 certificate",
+    description: "certificate for the organisers. dark, a bit ceremonial.",
     category: "Certificates",
     image: work12,
   },
   {
     id: 13,
-    title: "Paradox CTF Certificate",
-    description: "A playful pixel-art certificate for participants of Paradox, a 24-hour cryptic-hunt CTF — combining game-style typography and a retro landscape to match the puzzle-quest spirit of the event.",
+    title: "paradox certificate",
+    description: "pixel certificate for a 24h cryptic hunt.",
     category: "Certificates",
     image: work13,
   },
@@ -122,11 +106,11 @@ const works: Work[] = [
 
 const categories: Category[] = ["All Projects", "Social Media Posts", "Posters", "Certificates", "Tshirt Design"];
 
-// Theme tokens (scoped to this page)
-const BG = "hsl(160 50% 6%)";
-const FG = "hsl(150 60% 88%)";
-const ACCENT = "hsl(158 70% 45%)";
-const MUTED = "hsl(150 15% 55%)";
+// Palette inspired by fromanother.love — cream paper + warm ink
+const BG = "hsl(50 60% 93%)";
+const FG = "hsl(20 14% 12%)";
+const ACCENT = "hsl(20 14% 12%)";
+const MUTED = "hsl(30 10% 38%)";
 
 const GraphicDesigns = () => {
   const [active, setActive] = useState<Category>("All Projects");
@@ -165,10 +149,14 @@ const GraphicDesigns = () => {
     };
   }, []);
 
+  const hoveredWork = works.find((w) => w.id === hoveredId);
   const revealedWork = works.find((w) => w.id === revealedId);
 
+  const serif = "'Cormorant Garamond', 'PP Editorial New', Georgia, serif";
+  const mono = "'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace";
+
   return (
-    <div className="min-h-screen" style={{ background: BG, color: FG }}>
+    <div className="min-h-screen" style={{ background: BG, color: FG, fontFamily: mono }}>
       <svg className="absolute w-0 h-0" aria-hidden="true">
         <defs>
           <filter id="fluid-distort">
@@ -180,22 +168,46 @@ const GraphicDesigns = () => {
         </defs>
       </svg>
 
-      <header className="fixed top-0 inset-x-0 z-40 px-6 md:px-10 py-5 flex items-center justify-between" style={{ background: `${BG.slice(0, -1)} / 0.85)`.replace("hsl", "hsl"), backdropFilter: "blur(8px)" }}>
-        <Link to="/" className="flex items-center gap-2 text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
+      <header
+        className="fixed top-0 inset-x-0 z-40 px-6 md:px-10 py-5 flex items-center justify-between"
+        style={{ background: "hsl(50 60% 93% / 0.85)", backdropFilter: "blur(8px)" }}
+      >
+        <Link to="/" className="flex items-center gap-2 text-xs tracking-[0.2em] uppercase hover:opacity-60 transition-opacity">
           <ArrowLeft className="w-4 h-4" />
           Menu
         </Link>
-        <h1 className="text-xl md:text-2xl tracking-tight" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}>
-          graphic<span style={{ color: ACCENT }}>designs</span>
+        <h1 className="text-2xl md:text-3xl tracking-tight" style={{ fontFamily: serif, fontStyle: "italic" }}>
+          graphic<span>designs</span>
         </h1>
-        <a href="mailto:shrutiselvakkumar06@gmail.com" className="text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
+        <a href="mailto:shrutiselvakkumar06@gmail.com" className="text-xs tracking-[0.2em] uppercase hover:opacity-60 transition-opacity">
           Let's chat →
         </a>
       </header>
 
+      {/* Centered hover title overlay */}
+      <div
+        className="fixed inset-0 z-30 flex items-center justify-center pointer-events-none transition-opacity duration-300 px-6"
+        style={{ opacity: hoveredWork ? 1 : 0 }}
+      >
+        <span
+          className="text-center"
+          style={{
+            fontFamily: serif,
+            fontStyle: "italic",
+            fontSize: "clamp(3rem, 10vw, 9rem)",
+            lineHeight: 0.95,
+            color: FG,
+            mixBlendMode: "difference",
+            filter: "invert(1)",
+          }}
+        >
+          {hoveredWork?.title}
+        </span>
+      </div>
+
       <div className="pt-24 md:pt-28 pb-20 px-6 md:px-10 grid grid-cols-12 gap-6 md:gap-10 max-w-[1600px] mx-auto">
         <aside className="col-span-12 md:col-span-2 md:sticky md:top-28 md:self-start">
-          <ul className="space-y-2 text-sm" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}>
+          <ul className="space-y-2" style={{ fontFamily: serif, fontStyle: "italic" }}>
             {categories.map((cat) => {
               const isActive = cat === active;
               return (
@@ -206,7 +218,9 @@ const GraphicDesigns = () => {
                     style={{ color: isActive ? ACCENT : MUTED }}
                   >
                     <span className="text-base">{cat}</span>
-                    <span className="text-xs tabular-nums ml-3">{String(counts[cat] ?? 0).padStart(2, "0")}</span>
+                    <span className="text-[10px] tabular-nums ml-3" style={{ fontFamily: mono, fontStyle: "normal" }}>
+                      {String(counts[cat] ?? 0).padStart(2, "0")}
+                    </span>
                   </button>
                   {isActive && <div className="h-px mt-1 w-12" style={{ background: ACCENT }} />}
                 </li>
@@ -216,14 +230,13 @@ const GraphicDesigns = () => {
         </aside>
 
         <main className="col-span-12 md:col-span-7">
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
-            {filtered.map((work, idx) => {
+          <div className="columns-1 sm:columns-2 gap-4 md:gap-6 [column-fill:_balance]">
+            {filtered.map((work) => {
               const isHovered = hoveredId === work.id;
-              const offset = idx % 2 === 1 ? "md:mt-12" : "";
               return (
                 <div
                   key={work.id}
-                  className={`relative aspect-square overflow-hidden cursor-pointer ${offset}`}
+                  className="mb-4 md:mb-6 break-inside-avoid relative overflow-hidden cursor-pointer"
                   onMouseEnter={() => handleEnter(work.id)}
                   onMouseLeave={handleLeave}
                 >
@@ -231,23 +244,12 @@ const GraphicDesigns = () => {
                     src={work.image}
                     alt={work.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700"
+                    className="w-full h-auto block transition-transform duration-700"
                     style={{
                       filter: isHovered ? "url(#fluid-distort)" : "none",
-                      transform: isHovered ? "scale(1.04)" : "scale(1)",
+                      transform: isHovered ? "scale(1.03)" : "scale(1)",
                     }}
                   />
-                  <div
-                    className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300"
-                    style={{ opacity: isHovered ? 1 : 0, background: "hsl(160 50% 4% / 0.35)" }}
-                  >
-                    <span
-                      className="text-2xl md:text-4xl text-center px-4"
-                      style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: FG }}
-                    >
-                      {work.title}
-                    </span>
-                  </div>
                 </div>
               );
             })}
@@ -258,13 +260,13 @@ const GraphicDesigns = () => {
           <div className="transition-opacity duration-500" style={{ opacity: revealedWork ? 1 : 0 }}>
             {revealedWork && (
               <>
-                <p className="text-xs tracking-[0.25em] uppercase mb-3" style={{ color: ACCENT }}>
+                <p className="text-[10px] tracking-[0.25em] uppercase mb-3" style={{ color: MUTED }}>
                   {revealedWork.category}
                 </p>
-                <h2 className="text-2xl mb-4 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h2 className="text-2xl mb-4 leading-tight" style={{ fontFamily: serif, fontStyle: "italic" }}>
                   {revealedWork.title}
                 </h2>
-                <p className="text-sm leading-relaxed" style={{ color: "hsl(150 20% 78%)" }}>
+                <p className="text-sm leading-relaxed" style={{ color: MUTED, fontFamily: mono }}>
                   {revealedWork.description}
                 </p>
               </>
