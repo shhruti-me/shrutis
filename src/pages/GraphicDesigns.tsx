@@ -190,15 +190,15 @@ const GraphicDesigns = () => {
         style={{ opacity: hoveredWork ? 1 : 0 }}
       >
         <span
-          className="text-center"
+          className="text-center uppercase tracking-[0.05em]"
           style={{
-            fontFamily: serif,
-            fontStyle: "italic",
-            fontSize: "clamp(3rem, 10vw, 9rem)",
-            lineHeight: 0.95,
+            fontFamily: mono,
+            fontWeight: 500,
+            fontSize: "clamp(1.5rem, 5vw, 4rem)",
+            lineHeight: 1.05,
             color: FG,
-            mixBlendMode: "difference",
-            filter: "invert(1)",
+            textShadow: "0 1px 0 hsl(50 60% 93% / 0.6)",
+            maxWidth: "90vw",
           }}
         >
           {hoveredWork?.title}
@@ -206,23 +206,23 @@ const GraphicDesigns = () => {
       </div>
 
       <div className="pt-24 md:pt-28 pb-20 px-6 md:px-10 grid grid-cols-12 gap-6 md:gap-10 max-w-[1600px] mx-auto">
-        <aside className="col-span-12 md:col-span-2 md:sticky md:top-28 md:self-start">
-          <ul className="space-y-2" style={{ fontFamily: serif, fontStyle: "italic" }}>
+        <aside className="col-span-12 md:col-span-2 md:sticky md:top-28 md:self-start flex justify-center md:block">
+          <ul className="space-y-2 inline-block text-center md:block md:text-left" style={{ fontFamily: serif, fontStyle: "italic" }}>
             {categories.map((cat) => {
               const isActive = cat === active;
               return (
                 <li key={cat}>
                   <button
                     onClick={() => setActive(cat)}
-                    className="flex items-baseline justify-between w-full text-left transition-all"
+                    className="flex items-baseline justify-center md:justify-between gap-3 md:gap-0 w-full transition-all"
                     style={{ color: isActive ? ACCENT : MUTED }}
                   >
                     <span className="text-base">{cat}</span>
-                    <span className="text-[10px] tabular-nums ml-3" style={{ fontFamily: mono, fontStyle: "normal" }}>
+                    <span className="text-[10px] tabular-nums" style={{ fontFamily: mono, fontStyle: "normal" }}>
                       {String(counts[cat] ?? 0).padStart(2, "0")}
                     </span>
                   </button>
-                  {isActive && <div className="h-px mt-1 w-12" style={{ background: ACCENT }} />}
+                  {isActive && <div className="h-px mt-1 w-12 mx-auto md:mx-0" style={{ background: ACCENT }} />}
                 </li>
               );
             })}
@@ -230,7 +230,7 @@ const GraphicDesigns = () => {
         </aside>
 
         <main className="col-span-12 md:col-span-7">
-          <div className="columns-1 sm:columns-2 gap-4 md:gap-6 [column-fill:_balance]">
+          <div className="columns-2 lg:columns-2 gap-3 sm:gap-4 md:gap-6 [column-fill:_balance]">
             {filtered.map((work) => {
               const isHovered = hoveredId === work.id;
               return (
@@ -256,17 +256,24 @@ const GraphicDesigns = () => {
           </div>
         </main>
 
-        <aside className="hidden md:block col-span-3 md:sticky md:top-28 md:self-start">
-          <div className="transition-opacity duration-500" style={{ opacity: revealedWork ? 1 : 0 }}>
+        <aside className="col-span-12 md:col-span-3 md:sticky md:top-28 md:self-start order-last">
+          <div
+            className="transition-opacity duration-500 md:min-h-0 min-h-[6rem] fixed md:static bottom-0 inset-x-0 md:inset-auto p-6 md:p-0 z-20 md:z-auto pointer-events-none md:pointer-events-auto"
+            style={{
+              opacity: revealedWork ? 1 : 0,
+              background: "hsl(50 60% 93% / 0.92)",
+              backdropFilter: "blur(6px)",
+            }}
+          >
             {revealedWork && (
               <>
-                <p className="text-[10px] tracking-[0.25em] uppercase mb-3" style={{ color: MUTED }}>
+                <p className="text-[10px] tracking-[0.25em] uppercase mb-2 md:mb-3" style={{ color: MUTED }}>
                   {revealedWork.category}
                 </p>
-                <h2 className="text-2xl mb-4 leading-tight" style={{ fontFamily: serif, fontStyle: "italic" }}>
+                <h2 className="text-xl md:text-2xl mb-2 md:mb-4 leading-tight" style={{ fontFamily: serif, fontStyle: "italic" }}>
                   {revealedWork.title}
                 </h2>
-                <p className="text-sm leading-relaxed" style={{ color: MUTED, fontFamily: mono }}>
+                <p className="text-xs md:text-sm leading-relaxed" style={{ color: MUTED, fontFamily: mono }}>
                   {revealedWork.description}
                 </p>
               </>
