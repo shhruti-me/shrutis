@@ -184,20 +184,20 @@ const GraphicDesigns = () => {
         </a>
       </header>
 
-      {/* Centered hover title overlay */}
+      {/* Centered hover title overlay — inverted blend like reference */}
       <div
         className="fixed inset-0 z-30 flex items-center justify-center pointer-events-none transition-opacity duration-300 px-6"
-        style={{ opacity: hoveredWork ? 1 : 0 }}
+        style={{ opacity: hoveredWork ? 1 : 0, mixBlendMode: "difference" }}
       >
         <span
-          className="text-center uppercase tracking-[0.05em]"
+          className="text-center uppercase"
           style={{
-            fontFamily: mono,
-            fontWeight: 500,
-            fontSize: "clamp(1.5rem, 5vw, 4rem)",
-            lineHeight: 1.05,
-            color: FG,
-            textShadow: "0 1px 0 hsl(50 60% 93% / 0.6)",
+            fontFamily: "'Archivo Black', 'Anton', sans-serif",
+            fontWeight: 900,
+            fontSize: "clamp(2.5rem, 8vw, 7rem)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.01em",
+            color: "#ffffff",
             maxWidth: "90vw",
           }}
         >
@@ -206,7 +206,7 @@ const GraphicDesigns = () => {
       </div>
 
       <div className="pt-24 md:pt-28 pb-20 px-6 md:px-10 grid grid-cols-12 gap-6 md:gap-10 max-w-[1600px] mx-auto">
-        <aside className="col-span-12 md:col-span-2 md:sticky md:top-28 md:self-start flex justify-center md:block">
+        <aside className="col-span-12 md:col-span-2 md:fixed md:left-10 md:top-1/2 md:-translate-y-1/2 md:w-[14%] flex justify-center md:block">
           <ul className="space-y-2 inline-block text-center md:block md:text-left" style={{ fontFamily: serif, fontStyle: "italic" }}>
             {categories.map((cat) => {
               const isActive = cat === active;
@@ -229,7 +229,7 @@ const GraphicDesigns = () => {
           </ul>
         </aside>
 
-        <main className="col-span-12 md:col-span-7">
+        <main className="col-span-12 md:col-start-3 md:col-span-7">
           <div className="columns-2 lg:columns-2 gap-3 sm:gap-4 md:gap-6 [column-fill:_balance]">
             {filtered.map((work) => {
               const isHovered = hoveredId === work.id;
