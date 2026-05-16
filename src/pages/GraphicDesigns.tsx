@@ -256,17 +256,24 @@ const GraphicDesigns = () => {
           </div>
         </main>
 
-        <aside className="hidden md:block col-span-3 md:sticky md:top-28 md:self-start">
-          <div className="transition-opacity duration-500" style={{ opacity: revealedWork ? 1 : 0 }}>
+        <aside className="col-span-12 md:col-span-3 md:sticky md:top-28 md:self-start order-last">
+          <div
+            className="transition-opacity duration-500 md:min-h-0 min-h-[6rem] fixed md:static bottom-0 inset-x-0 md:inset-auto p-6 md:p-0 z-20 md:z-auto pointer-events-none md:pointer-events-auto"
+            style={{
+              opacity: revealedWork ? 1 : 0,
+              background: "hsl(50 60% 93% / 0.92)",
+              backdropFilter: "blur(6px)",
+            }}
+          >
             {revealedWork && (
               <>
-                <p className="text-[10px] tracking-[0.25em] uppercase mb-3" style={{ color: MUTED }}>
+                <p className="text-[10px] tracking-[0.25em] uppercase mb-2 md:mb-3" style={{ color: MUTED }}>
                   {revealedWork.category}
                 </p>
-                <h2 className="text-2xl mb-4 leading-tight" style={{ fontFamily: serif, fontStyle: "italic" }}>
+                <h2 className="text-xl md:text-2xl mb-2 md:mb-4 leading-tight" style={{ fontFamily: serif, fontStyle: "italic" }}>
                   {revealedWork.title}
                 </h2>
-                <p className="text-sm leading-relaxed" style={{ color: MUTED, fontFamily: mono }}>
+                <p className="text-xs md:text-sm leading-relaxed" style={{ color: MUTED, fontFamily: mono }}>
                   {revealedWork.description}
                 </p>
               </>
